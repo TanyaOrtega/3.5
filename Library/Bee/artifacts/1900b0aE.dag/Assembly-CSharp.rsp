@@ -131,6 +131,8 @@
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Firebase/Plugins/Firebase.App.dll"
 -r:"Assets/Firebase/Plugins/Firebase.Auth.dll"
+-r:"Assets/Firebase/Plugins/Firebase.Database.dll"
+-r:"Assets/Firebase/Plugins/Firebase.Firestore.dll"
 -r:"Assets/Firebase/Plugins/Firebase.Platform.dll"
 -r:"Assets/Firebase/Plugins/Firebase.TaskExtension.dll"
 -r:"Assets/Firebase/Plugins/Google.MiniJson.dll"
@@ -452,11 +454,17 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.55f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scripts/BulletScript.cs"
 "Assets/Scripts/CameraScript.cs"
+"Assets/Scripts/FirebaseInitializer.cs"
+"Assets/Scripts/FirestoreManager.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GruntScript.cs"
 "Assets/Scripts/JohnMovement.cs"
+"Assets/Scripts/LevelUI.cs"
+"Assets/Scripts/MainMenuController.cs"
+"Assets/Scripts/PauseOnEscape.cs"
 "Assets/Scripts/ScoreDisplay.cs"
 "Assets/Scripts/ScoreManager.cs"
+"Assets/Scripts/UIManager.cs"
 -langversion:9.0
 /deterministic
 /optimize+

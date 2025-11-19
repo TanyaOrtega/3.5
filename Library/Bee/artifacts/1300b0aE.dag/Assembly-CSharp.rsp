@@ -460,8 +460,10 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GruntScript.cs"
 "Assets/Scripts/JohnMovement.cs"
+"Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/ScoreDisplay.cs"
 "Assets/Scripts/ScoreManager.cs"
+"Assets/Scripts/UIManager.cs"
 -langversion:9.0
 /deterministic
 /optimize+

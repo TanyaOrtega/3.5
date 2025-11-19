@@ -2752,9 +2752,9 @@ GameObject:
   - component: {fileID: 1762286115}
   - component: {fileID: 1762286114}
   - component: {fileID: 1762286118}
-  - component: {fileID: 1762286117}
   - component: {fileID: 1762286116}
-  m_Layer: 0
+  - component: {fileID: 1762286117}
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6731,7 +6731,7 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:

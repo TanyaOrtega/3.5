@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +14,8 @@ public class JohnMovement : MonoBehaviour
     private bool Grounded;
     private float LastShoot;
     private int Health = 5;
+    public float fallDeathY = -10f;
+    private bool isDead = false;
 
     void Start()
     {
@@ -27,18 +29,21 @@ public class JohnMovement : MonoBehaviour
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        if (Horizontal < 0.0f)
+            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        else if (Horizontal > 0.0f)
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-            Animator.SetBool("running", Horizontal != 0.0f);
+        Animator.SetBool("running", Horizontal != 0.0f);
 
         Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
 
-        if (Physics2D.Raycast(transform.position, Vector3.down, 0.1f))
+        Grounded = Physics2D.Raycast(transform.position, Vector3.down, 0.1f);
+
+        if (transform.position.y < fallDeathY)
         {
-            Grounded = true;
+            Die();
         }
-        else Grounded = false;
 
         if (Input.GetKeyDown(KeyCode.W) && Grounded)
         {
@@ -50,6 +55,11 @@ public class JohnMovement : MonoBehaviour
             Shoot();
             LastShoot = Time.time;
         }
+
+        if (transform.position.y < fallDeathY)
+        {
+            Die();
+        }
     }
 
     private void Jump()
@@ -58,10 +68,8 @@ public class JohnMovement : MonoBehaviour
     }
 
     private void Shoot()
-    { 
-        Vector3 direction;
-        if (transform.localScale.x == 1.0f) direction = Vector3.right;
-        else direction = Vector3.left;
+    {
+        Vector3 direction = transform.localScale.x == 1.0f ? Vector3.right : Vector3.left;
 
         GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         bullet.GetComponent<BulletScript>().SetDirection(direction);
@@ -74,7 +82,31 @@ public class JohnMovement : MonoBehaviour
 
     public void Hit()
     {
-        Health = Health - 1;
-        if (Health == 0) Destroy(gameObject);
+        Health--;
+        if (Health <= 0)
+        {
+            Die();
+        }
+    }
+
+    
+    public void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+
+        GameManager gm = FindFirstObjectByType<GameManager>();
+        if (gm != null)
+            gm.OnPlayerDeath();
+    }
+
+    public void ResetStateAfterDeath()
+    {
+        isDead = false;
+    }
+
+    public void ReceiveLethalHit()
+    {
+        Die();
     }
 }

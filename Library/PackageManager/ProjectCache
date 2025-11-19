@@ -125,11 +125,15 @@ m_ResolvedPackages:
     - 2.9.1
     - 2.9.2
     - 2.9.3
+    - 2.10.0
+    - 2.10.1
     compatible:
     - 2.8.2
     - 2.9.1
     - 2.9.2
     - 2.9.3
+    - 2.10.0
+    - 2.10.1
     recommended: 2.8.2
     deprecated: []
   dependencies: []
@@ -521,9 +525,11 @@ m_ResolvedPackages:
     - 2.0.21
     - 2.0.22
     - 2.0.23
+    - 2.0.25
     compatible:
     - 2.0.23
-    recommended: 2.0.23
+    - 2.0.25
+    recommended: 2.0.25
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -1442,10 +1448,12 @@ m_ResolvedPackages:
     - 1.9.6
     - 1.9.7
     - 1.9.8
+    - 1.9.9
     compatible:
     - 1.9.7
     - 1.9.8
-    recommended: 1.9.8
+    - 1.9.9
+    recommended: 1.9.9
     deprecated:
     - 1.8.0-pre.1
   dependencies:
@@ -4832,6 +4840,8 @@ m_ResolvedPackages:
     - 12.0.1
     - 12.0.2
     - 13.0.0
+    - 13.0.1
+    - 14.0.0
     compatible:
     - 10.2.1
     recommended: 10.2.1
@@ -5157,6 +5167,7 @@ m_ResolvedPackages:
     - 11.0.0
     - 11.0.1
     - 12.0.0
+    - 13.0.0
     compatible:
     - 9.1.0
     recommended: 9.1.0
@@ -5446,6 +5457,7 @@ m_ResolvedPackages:
     - 12.0.0
     - 12.0.1
     - 13.0.0
+    - 14.0.0
     compatible:
     - 10.0.7
     - 10.1.0
@@ -5711,6 +5723,8 @@ m_ResolvedPackages:
     - 5.0.0
     - 5.0.1
     - 6.0.0
+    - 6.0.1
+    - 7.0.0
     compatible:
     - 4.1.0
     recommended: 4.1.0
@@ -5839,6 +5853,8 @@ m_ResolvedPackages:
     - 2.0.1
     - 2.0.2
     - 3.0.0
+    - 3.0.1
+    - 4.0.0
     compatible:
     - 1.1.9
     - 1.1.10
@@ -5971,10 +5987,12 @@ m_ResolvedPackages:
     - 4.9.1
     - 4.9.2
     - 4.9.3
+    - 4.9.4
     compatible:
     - 4.9.2
     - 4.9.3
-    recommended: 4.9.3
+    - 4.9.4
+    recommended: 4.9.4
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -6460,6 +6478,7 @@ m_ResolvedPackages:
     - 2.6.0-pre.3
     - 2.6.0-pre.4
     - 2.6.2
+    - 2.6.3
     compatible:
     - 2.5.1
     - 2.5.2
@@ -6469,6 +6488,7 @@ m_ResolvedPackages:
     - 2.6.0-pre.3
     - 2.6.0-pre.4
     - 2.6.2
+    - 2.6.3
     recommended: 2.5.7
     deprecated: []
   dependencies:
@@ -6746,6 +6766,8 @@ m_ResolvedPackages:
     - 11.0.0
     - 11.0.1
     - 12.0.0
+    - 12.0.1
+    - 13.0.0
     compatible:
     - 9.1.1
     recommended: 9.1.1
